@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - program that print exactly "Programming is like building a multilingual puzzle
+ * main - print exactly "Programming is like building a multilingual puzzle
  * Return: 0 (Success)
  */
 int main(void)
