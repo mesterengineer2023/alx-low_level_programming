@@ -28,7 +28,7 @@ return (NULL);
 }
 for (q = 0; q < height; q++)
 {
-for (w= 0; w < width; w++)
+for (w = 0; w < width; w++)
 	abc[q][w] = 0;
 }
 return (abc);
