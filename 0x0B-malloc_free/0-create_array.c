@@ -3,23 +3,23 @@
  * create_array - function that creates an array of chars,
  *  and initializes it with a specific char
  * @size: first bytes of the memory
- * @c: constant byte b
- * Return: pointer to the resulting string dests
+ * @c: constant 
+ * Return: pointer
  */
 char *create_array(unsigned int size, char c)
 {
 	char *s;
-	int i = size;
+	int z = size;
 
 	s = malloc(sizeof(char) * size);
 	if (size == 0 || s == NULL)
 	{
 		return (NULL);
 	}
-	while (i >= 0)
+	while (z >= 0)
 	{
-		s[i] = c;
-		i--;
+		s[z] = c;
+		z--;
 	}
 	return (s);
 }
