@@ -1,4 +1,7 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
+
 /**
  * _strdup - return a pointer to a newly allocted space in memory
  * that contains a copy of string given as parameter
@@ -7,26 +10,18 @@
  */
 
 char *_strdup(char *str)
-
 {
-	int i;
-	int tail = 0;
-	char *new_copy;
-
-	if (str == NULL)
-		return (NULL);
-
-	while (str[tail])
-	{
-		tail++;
-	}
-	new_copy = malloc(tail + 1);
-	if (new_copy == 0)
-		return (NULL);
-
-	for (i = 0; i < tail; i++)
-	{
-			new_copy[i] = str[i];
-	}
-		return (new_copy);
+char *xcopy;
+int i, tail = 0;
+if (str == NULL)
+return (NULL);
+i = 0;
+while (str[i] != '\0')
+i++;
+xcopy = malloc(sizeof(char) * (i + 1));
+if (xcopy == NULL)
+return (NULL);
+for (tail = 0; str[tail]; tail++)
+xcopy[tail] = str[tail];
+return (xcopy);
 }
